@@ -4,11 +4,20 @@ body{
 }
 .textstyle1{
   text-align: center;
-  color: rgb(37, 128, 154);
+  color: rgb(245, 91, 196);
 }
 .linkbutton{
-    background-color: rgb(0,225,225);
+    background-color: rgb(247, 200, 232);
     color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 75px;
+}
+.linkbutton988{
+    background-color: rgb(247, 200, 232);
+    color: green;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
