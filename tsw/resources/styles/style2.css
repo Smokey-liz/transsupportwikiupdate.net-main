@@ -56,7 +56,6 @@ background-color: rgb(212, 186, 210);
               -32px 32px #f9a825,
               -36px 36px #ff5722;
 }
-}
 @-webkit-keyframes blinker {
   from { opacity: 1.0; }
   to { opacity: 0.0; }
