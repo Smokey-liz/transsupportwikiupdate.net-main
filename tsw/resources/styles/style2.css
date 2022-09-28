@@ -60,7 +60,7 @@ background-color: rgb(212, 186, 210);
   from { opacity: 1.0; }
   to { opacity: 0.0; }
   }
-  .flashAndFadeText {
+  .flashAndFadeText{
     -webkit-animation-name: blinker;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
