@@ -3,7 +3,40 @@
     <head>
         <title>Questioning</title>
         <link rel="stylesheet" type="text/css" href="tsw/resources/styles/style.css" />
+  </head>
+    <body>
+        <h1 class="rainbowtext1">Educational Material Generator</h1>
+        <a class="linkbutton" href="index.html">back</a>
+        <center>
+          <h2 class="textstyle1">This tool is designed to create a simple letter to a
+          frined of family member after coming out. It provides information on what
+          pronouns to use, what name you would like to be called, and FAQ about
+          what is and is not respectful. I feel that many people would be more supportive
+          and it would break the stigma of not talking about it. None of the information
+          input on this site will NEVER be saved or sold.</h2>
+
+        </center>
+        <h2 class="textstyle2">From:</h2>
+        <input type="text" id="fromLine">your name</input>
+        <h2 class="textstyle2">Intro Line:</h2>
+        <input type="text" id="introLine">ex. dear, hello, etc</input>
+        <h2 class="textstyle2">to:</h2>
+        <input type="text" id="toLine">name of person</input>
+        <h2 class="textstyle2"></h2>
+        <input type="text" id="relationshipToRecipient"></input>
+        <h2 class="textstyle2">Gender Identity:</h2>
+        <input type="text" id="genderIdentity">current options: trans woman trans man, trans woman, agender, gender fluid</input>
+        <h2 class="textstyle2">Sexuality:</h2>
+        <input type="text" id="sexuality">you can put anything you want here</input>
+        <h2 class="textstyle2">Which means I like:</h2>
+        <input type="text" id="iLike">ex. men,women, men and women, everyone reguardless of gender.</input>
+        <label id = "letterPara1">
+        test
+        </label>
+        <input type="button" onclick="generate_letter()"></button>
         <script type="text/javascript">
+        function generate_letter(){
+          var result = document.getElementById(letterPara1)
         //this is the actual function to generate the custom letter
         //setting the boilerplates and reuseable strings
           let sexualitySect = "sexualitySect"
@@ -18,23 +51,19 @@
           let bpAgender = "bpAgender";
           let bpGenderFluid =  "bpGenderFluid";
         //pulling user input
-          let introLine = concat(document.getElementById('introLine').value);
           let toLine = document.getElementById('toLine').value;
           let fromLine = document.getElementById('fromLine').value;
           let genderIdentity = document.getElementById('genderIdentity').value;
-          let sexuality = document.getElementById('sexuality').value;
           let iLike = document.getElementById('iLike').value
           let extraContent = document.getElementById('extraContent').value;
           let relationshipToRecipient = document.getElementById('relationshipToRecipient').value;
-
-        function generate_letter(){
         //branching if statements evaluating user input then changing the inner html of the letter paras
           if ( //if to parents
             relationshipToRecipient = "parent"
           ){
             if (genderIdentity = "trans woman"){
-              let letterFinal = concat(" ", introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent);
-              document.getElementById('letterPara1').innerHTML = concat(" ", introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent);
+              let letterFinal =  introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent;
+              document.getElementById('letterPara1').innerHTML = introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent;
             } else if (genderIdentity = "trans man"){
               document.getElementById('letterPara1').innerHTML = introLine + toLine + bpToParentIntro + bpTransM +
               sexuality + sexualitySect + iLike + closingSect + extraContent;
@@ -45,37 +74,10 @@
               document.getElementById('letterPara1').innerHTML = introLine + toLine + bpToParentIntro + bpGenderFluid +
               sexuality + sexualitySect + iLike + closingSect + extraContent;
             }else{
-              document.getElementById('letterPara1').innerHTML = unsupportedOptionsMsg;
-            }
-          }
-        }
-        </script>
-  </head>
-    <body>
-        <h1 class="rainbowtext1">Educational Material Generator</h1>
-        <a class="linkbutton" href="index.html">back</a>
-        <center>
-          <h2 class="textstyle1">This tool is designed to create a simple letter to a
-          frined of family member after coming out. It provides information on what
-          pronouns to use, what name you would like to be called, and FAQ about
-          what is and is not respectful. I feel that many people would be more supportive
-          and it would break the stigma of not talking about it. None of the information
-          input on this site will NEVER be saved or sold.</h2>
 
-        </center>
-        <h2 class="textstyle2">Intro Line:</h2>
-        <input type="text" id="introLine">ex. dear, hello, etc</input>
-        <h2 class="textstyle2">to:</h2>
-        <input type="text" id="toLine">name of person</input>
-        <h2 class="textstyle2"></h2>
-        <input type="text" id="relationshipToRecipient"></input>
-        <h2 class="textstyle2">Gender Identity:</h2>
-        <input type="text" id="genderIdentity">current options: trans woman trans man, trans woman, agender, gender fluid</input>
-        <h2 class="textstyle2">Sexuality:</h2>
-        <input type="text" id="sexuality">you can put anything you want here</input>
-        <h2 class="textstyle2">Which means I like:</h2>
-        <input type="text" id="iLike">ex. men,women, men and women, everyone reguardless of gender.</input>
-        <input type="button" onclick="generate_letter()"></button>
-        <p class="textstyle2" id="letterPara1" oncclick="generate_letter()">test</p>
+            }
+        }
+      }
+        </script>
     </body>
 </html>
