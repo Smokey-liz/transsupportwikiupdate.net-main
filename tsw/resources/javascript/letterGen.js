@@ -28,7 +28,7 @@ function generate_letter(){
   ){
     if (genderIdentity = "trans woman"){
       let letterFinal = concat(" ", introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent);
-      document.getElementById('letterPara1').innerHTML = concat(" ", introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent);
+      document.getElementById('letterPara1').innerHTML = concat("xyz ", introLine, toLine, bpToParentIntro, bpTransF, sexuality, sexualitySect, iLike, closingSect, extraContent);
     } else if (genderIdentity = "trans man"){
       document.getElementById('letterPara1').innerHTML = introLine + toLine + bpToParentIntro + bpTransM +
       sexuality + sexualitySect + iLike + closingSect + extraContent;
