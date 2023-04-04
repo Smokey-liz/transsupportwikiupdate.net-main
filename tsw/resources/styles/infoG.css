@@ -1,0 +1,90 @@
+body{
+  background-color: Purple;
+}
+.textstyle1{
+  text-align: center;
+  color: rgb(255, 128, 154);
+}
+.linkbutton{
+    background-color: rgb(0,225,225);
+    color: white;
+    padding: 45px 65px;
+    text-align: center;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+.textstyle2{
+    text-align: left;
+    color: rgb(37, 128, 154);
+}
+.rainbowtext1{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -4px 4px #ef3550,
+             -8px 8px #f48fb1,
+             -12px 12px #7e57c2,
+             -16px 16px #2196f3,
+             -20px 20px #26c6da,
+             -24px 24px #43a047,
+             -28px 28px #eeff41,
+             -32px 32px #f9a825,
+             -36px 36px #ff5722;
+}
+.rainbowtext2{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -4px 4px #ef3550,
+              -8px 8px #f48fb1,
+              -12px 12px #7e57c2,
+              -16px 16px #2196f3,
+              -20px 20px #26c6da,
+              -24px 24px #43a047,
+              -28px 28px #eeff41,
+              -32px 32px #f9a825,
+              -36px 36px #ff5722;
+}
+@-webkit-keyframes blinker{
+from { opacity: 1.0; }
+to { opacity: 0.0; }
+}
+.flashAndFadeText{
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+  -webkit-animation-duration: 1.7s;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -4px 4px #ff0000,
+           -8px 8px #f48fb1,
+           -12px 12px #ff57c2,
+           -16px 16px #ff96f3,
+           -20px 20px #ffc6da,
+           -24px 24px #ffa047,
+           -28px 28px #ffff41,
+           -32px 32px #ffa825,
+           -36px 36px #ff5722;
+}
