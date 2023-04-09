@@ -89,47 +89,162 @@ to { opacity: 0.0; }
            -36px 36px #ff5722;
 }
 
-/* Dropdown Button */
+/* Style The Dropdown Button */
 .dropbtn {
- background-color: #3498DB;
- color: white;
- padding: 16px;
- font-size: 16px;
- border: none;
- cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
- background-color: #2980B9;
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
- position: relative;
- display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
- display: none;
- position: absolute;
- background-color: #f1f1f1;
- min-width: 160px;
- box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
- color: black;
- padding: 12px 16px;
- text-decoration: none;
- display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+.arrow-icon {
+  background-color:transparent;
+  height: 2.8em;
+  width: 2.8em;
+  display:block;
+  padding: 0.5em;
+  margin: 1em auto;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.left-bar {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left:0;
+  width: 40px;
+  height: 10px;
+  display: block;
+  transform: rotate(35deg);
+  float: right;
+  border-radius: 2px;
+  &:after {
+    content:"";
+    background-color: white;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 0.5s cubic-bezier(.25,1.7,.35,.8);
+    z-index: -1;
+  }
+}
+
+.right-bar {
+  position: absolute;
+  background-color: white;
+  top: 0px;
+  left:26px;
+  width: 40px;
+  height: 10px;
+  display: block;
+  transform: rotate(-35deg);
+  float: right;
+  border-radius: 2px;
+  &:after {
+    content:"";
+    background-color: white;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 0.5s cubic-bezier(.25,1.7,.35,.8);
+    z-index: -1;
+  }
+}
+
+.open {
+    .left-bar:after {
+    transform-origin: center center;
+    transform: rotate(-70deg);
+  }
+  .right-bar:after {
+    transform-origin: center center;
+    transform: rotate(70deg);
+  }
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #151719;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(rgb(green));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: Georgia, serif;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  color: green;
+
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}

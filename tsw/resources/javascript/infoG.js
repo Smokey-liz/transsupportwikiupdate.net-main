@@ -17,3 +17,6 @@ window.onclick = function(event) {
     }
   }
 }
+$( ".arrow-icon" ).click(function() {
+  $(this).toggleClass("open");
+});
