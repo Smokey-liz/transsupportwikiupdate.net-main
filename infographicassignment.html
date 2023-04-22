@@ -42,10 +42,9 @@
     <div class="container">
       <img src="tsw/resources/images/Weaponize.png" height="350px" width="350px">
       <div class="overlay">
-        <div class="text">Weaponization is the act of taking informaion gathered about a target and crafting or selecting an exploit and delivery method.</div>
+        <div class="text">Weaponization is the act of taking informaion gathered about a target and crafting or selecting an exploit and delivery method. This can look like malware development, cve research, phishing page creation, phishing email writing, or getting stolen creds</div>
       </div>
     </div>
-    <p class="textstyle1">can look like Malware development, cve research, phishing page creation, phishing email writing, or getting stolen creds.</p>
     <center>
       <br>
       <br>
@@ -65,12 +64,20 @@
        <span style="--i:7">R</span>
        <span style="--i:8">Y</span>
       </div>
-      <div class="container">
+      <div class="container" onclick="playMusic()">
         <img src="tsw/resources/images/Phishing.jpeg" height="75px" width="75px">
         <div class="overlay">
           <div class="text">Hello World</div>
         </div>
       </div>
+
+      <script>
+        function playMusic() {
+            let audio = new Audio("tsw/resources/images/youve-got-mail-sound.mp3");
+            audio.play()
+          }
+      </script>
+
       <img src="tsw/resources/images/injection.jpeg" height="50px" width="50px">
       <img src="tsw/resources/images/BruteForce.jpeg" height="50px" width="50px">
       <p class="textstyle1">Persistance</p>
