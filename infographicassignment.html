@@ -14,12 +14,18 @@
    <span style="--i:4">O</span>
    <span style="--i:5">N</span>
   </div>
-  <div class="container">
+  <div class="container" onclick="playRecon()">
     <img src="tsw/resources/images/eye2.jpeg" height="350px" width="350px">
     <div class="overlay">
       <div class="text">Open Source Intelligence or OSINT is the process of gathering information on a potential target for an attack. This information gathered can consist of anything from social media to home address and email. This part of the killchain is difficult to detect and mitigate because it is technically legal.</div>
     </div>
   </div>
+  <script>
+    function playRecon() {
+        let audio = new Audio("tsw/resources/images/imwatchingyoumotherfucker.mp3");
+        audio.play()
+      }
+  </script>
     <br>
     <br>
     <br>
@@ -39,12 +45,18 @@
      <span style="--i:8">Z</span>
      <span style="--i:9">E</span>
     </div>
-    <div class="container">
+    <div class="container" onclick="playWeaponize()">
       <img src="tsw/resources/images/Weaponize.png" height="350px" width="350px">
       <div class="overlay">
         <div class="text">Weaponization is the act of taking informaion gathered about a target and crafting or selecting an exploit and delivery method. This can look like malware development, cve research, phishing page creation, phishing email writing, or getting stolen creds</div>
       </div>
     </div>
+    <script>
+      function playWeaponize() {
+          let audio = new Audio("tsw/resources/images/keyboard-typing-sound-effect.mp3");
+          audio.play()
+        }
+    </script>
     <center>
       <br>
       <br>
@@ -64,18 +76,24 @@
        <span style="--i:7">R</span>
        <span style="--i:8">Y</span>
       </div>
-      <div class="container" onclick="playMusic()">
+      <div class="container" onclick="playDelivery()">
         <img src="tsw/resources/images/Phishing.jpeg" height="350px" width="350px">
         <div class="overlay">
           <div class="text">Delivery is the action of sending the weaponized attack method to the target. This can look like phishing emials, malvertising, code injection, or use of ingress methods to transfer the payload to the target computers.</div>
         </div>
       </div>
       <script>
-        function playMusic() {
+        function playDelivery() {
             let audio = new Audio("tsw/resources/images/youve-got-mail-sound.mp3");
             audio.play()
           }
       </script>
+      <div class="container">
+          <div class="image">
+            <img src="tsw/resources/images/shield.jpg" height="50px" width="50px">
+            <p class="defense">Preventitive Meauseres: firewall rules, cloud scanning, user vigilance</p>
+          </div>
+      </div>
       <center>
         <br>
         <br>
@@ -96,7 +114,7 @@
    <span style="--i:6">I</span>
    <span style="--i:7">T</span>
   </div>
-  <div class="container">
+  <div class="container" onclick="playExploit()">
     <img src="tsw/resources/images/exploit.png" height="350px" width="350px">
     <div class="overlay">
       <div class="text">Exploitaition is the execution of the weaponized code. This can look like an executable progran being run on a computer, malicous code exectution by a server via unsanitiezed user input, or credential theft using a phishing page.</div>
@@ -105,10 +123,16 @@
   <div class="container">
       <div class="image">
         <img src="tsw/resources/images/shield.jpg" height="50px" width="50px">
-        <p class="defense">Preventative measures include antivirus software and privlage management</p>
+        <p class="defense">Preventative measures: antivirus software, privlage management</p>
       </div>
     </div>
-  <center>
+    <script>
+      function playExploit() {
+          let audio = new Audio("tsw/resources/images/musica_1.mp3");
+          audio.play()
+        }
+    </script>
+    <center>
     <br>
     <br>
     <br>
@@ -127,12 +151,24 @@
     <span style="--i:6">L</span>
     <span style="--i:7">L</span>
   </div>
-  <div class="container">
+  <div class="container" onclick="playInstall()">
     <img src="tsw/resources/images/install.jpeg" height="350px" width="350px">
     <div class="overlay">
       <div class="text">Install refers to the installation of a backdoor, or more code to execute to perform actions or spawn a shell to interact with the target device.</div>
     </div>
   </div>
+  <script>
+    function playInstall() {
+        let audio = new Audio("tsw/resources/images/fma6waln.mp3");
+        audio.play()
+      }
+  </script>
+  <div class="container">
+      <div class="image">
+        <img src="tsw/resources/images/shield.jpg" height="50px" width="50px">
+        <p class="defense">Preventative measures: firewall rules </p>
+      </div>
+    </div>
   <center>
     <br>
     <br>
@@ -147,12 +183,18 @@
   <span style="--i:1">C</span>
   <span style="--i:2">2</span>
   </div>
-  <div class="container">
+  <div class="container" onclick="playC2()">
     <img src="tsw/resources/images/C2.png" height="350px" width="350px">
     <div class="overlay">
       <div class="text">C2 is an abbreviation for Command And Control. This refers to the device that connects back to the victim on the threat actor's behalf.</div>
     </div>
   </div>
+  <script>
+    function playC2() {
+        let audio = new Audio("tsw/resources/images/you-belong-to-me.mp3");
+        audio.play()
+      }
+  </script>
   <center>
     <br>
     <br>
@@ -173,12 +215,18 @@
     <span style="--i:6">N</span>
     <span style="--i:7">S</span>
   </div>
-  <div class="container">
+  <div class="container" onclick="playActions()">
     <img src="tsw/resources/images/actions.png" height="350px" width="350px">
     <div class="overlay">
       <div class="text">Actions refer to the actions taken by the attakcer after the payload has been executed and the C2 has been set up. This can be data exfiltration or corruption or an array of other options.</div>
     </div>
   </div>
+  <script>
+    function playActions() {
+        let audio = new Audio("tsw/resources/images/you-son-of-a-bitch-im-in.mp3");
+        audio.play()
+      }
+  </script>
   <p class="textstyle1"></p>
   <center>
     <div class="dropdown">
